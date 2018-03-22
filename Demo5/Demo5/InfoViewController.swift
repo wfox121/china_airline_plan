@@ -23,6 +23,21 @@ class InfoViewController: UIViewController {
         titleLabel.text = infoTitle
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("====vc2 viewWillAppear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("====vc2 viewDidAppear")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print("====vc2 viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("====vc2 viewDidDisappear")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
