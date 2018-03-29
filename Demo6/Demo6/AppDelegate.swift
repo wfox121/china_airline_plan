@@ -20,6 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        naviVC.pushViewController(firstVC!, animated: false)
 //        window?.rootViewController = naviVC
 //        print(window?.rootViewController)
+//        let tabbarVC = window?.rootViewController as! UITabBarController
+//        let firstVC = tabbarVC.viewControllers![0]
+//        
+//        firstVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+//        
+//        let second = tabbarVC.viewControllers![1]
+//        second.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+//        
+////        tabbarVC.tabBar.items![0].title = "Main"
+////        tabbarVC.tabBar.items![1].title = "Input"
+////        tabbarVC.tabBar.items![1] =
+////        tabbarVC.tabBar.items = [UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0),UITabBarItem(tabBarSystemItem: .downloads, tag: 1)]
+//        
+//        tabbarVC.selectedIndex = 0
+//        tabbar
         return true
     }
 

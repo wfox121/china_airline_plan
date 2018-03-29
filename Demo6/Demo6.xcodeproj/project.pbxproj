@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CC099F0206A272A00412AF7 /* ConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC099EF206A272A00412AF7 /* ConstraintViewController.swift */; };
 		4CD5EE702069D48D00E6EB19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5EE6F2069D48D00E6EB19 /* AppDelegate.swift */; };
 		4CD5EE722069D48D00E6EB19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5EE712069D48D00E6EB19 /* ViewController.swift */; };
 		4CD5EE752069D48D00E6EB19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5EE732069D48D00E6EB19 /* Main.storyboard */; };
 		4CD5EE772069D48D00E6EB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5EE762069D48D00E6EB19 /* Assets.xcassets */; };
 		4CD5EE7A2069D48D00E6EB19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5EE782069D48D00E6EB19 /* LaunchScreen.storyboard */; };
 		4CD5EE822069D4F300E6EB19 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5EE812069D4F300E6EB19 /* InputViewController.swift */; };
+		4CD5EE84206A0B5A00E6EB19 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5EE83206A0B5A00E6EB19 /* BlueViewController.swift */; };
+		4CD5EE86206A0DF900E6EB19 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5EE85206A0DF900E6EB19 /* YellowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CC099EF206A272A00412AF7 /* ConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintViewController.swift; sourceTree = "<group>"; };
 		4CD5EE6C2069D48D00E6EB19 /* Demo6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD5EE6F2069D48D00E6EB19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CD5EE712069D48D00E6EB19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		4CD5EE792069D48D00E6EB19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CD5EE7B2069D48D00E6EB19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD5EE812069D4F300E6EB19 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		4CD5EE83206A0B5A00E6EB19 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlueViewController.swift; path = ../../../../../../../../Documents/BlueViewController.swift; sourceTree = "<group>"; };
+		4CD5EE85206A0DF900E6EB19 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YellowViewController.swift; path = ../../../../../../../../Documents/YellowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				4CD5EE782069D48D00E6EB19 /* LaunchScreen.storyboard */,
 				4CD5EE7B2069D48D00E6EB19 /* Info.plist */,
 				4CD5EE812069D4F300E6EB19 /* InputViewController.swift */,
+				4CD5EE83206A0B5A00E6EB19 /* BlueViewController.swift */,
+				4CD5EE85206A0DF900E6EB19 /* YellowViewController.swift */,
+				4CC099EF206A272A00412AF7 /* ConstraintViewController.swift */,
 			);
 			path = Demo6;
 			sourceTree = "<group>";
@@ -141,7 +150,10 @@
 			files = (
 				4CD5EE822069D4F300E6EB19 /* InputViewController.swift in Sources */,
 				4CD5EE722069D48D00E6EB19 /* ViewController.swift in Sources */,
+				4CD5EE84206A0B5A00E6EB19 /* BlueViewController.swift in Sources */,
+				4CC099F0206A272A00412AF7 /* ConstraintViewController.swift in Sources */,
 				4CD5EE702069D48D00E6EB19 /* AppDelegate.swift in Sources */,
+				4CD5EE86206A0DF900E6EB19 /* YellowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
