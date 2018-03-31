@@ -8,6 +8,7 @@ target 'ZipUnZip' do
   use_frameworks!
 
   # Pods for ZipUnZip
-  source 'https://github.com/CocoaPods/Specs.git'
+#   source 'https://github.com/CocoaPods/Specs.git'
   pod 'Zip', '1.0'
+  pod "Kanna", :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
 end

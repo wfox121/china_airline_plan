@@ -12,10 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let defaultSession = URLSession(configuration: .default)
+    var dataTask: URLSessionDataTask?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let url = URL(string: "http://sme.moeasmea.gov.tw/startup/upload/opendata/gov_source_map_opendata.json")
+        
+        dataTask = defaultSession.dataTask(with: url!) { data, response, error in
+            defer {
+                self.dataTask = nil
+            }
+            
+           
+        }
+       
+        
+        
+        //
+        dataTask?.resume()
         return true
     }
 
