@@ -7,14 +7,47 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
+
     var window: UIWindow?
 
+    func doSomeThing() {
+        //call endBackgroundTask() on completion..
+        switch UIApplication.shared.applicationState {
+        case .active:
+            print("App is active.")
+        case .background:
+            print("App is in background.")
+            
+            while true {
+                sleep(1)
+                print("Background time remaining = \(UIApplication.shared.backgroundTimeRemaining) seconds")
+            }
+        case .inactive:
+            break
+        }
+    }
+    
+    func registerBackgroundTask() {
+        backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+            self?.endBackgroundTask()
+        }
+        assert(backgroundTask != UIBackgroundTaskInvalid)
+    }
+    
+    func endBackgroundTask() {
+        print("Background task ended.")
+        UIApplication.shared.endBackgroundTask(backgroundTask)
+        backgroundTask = UIBackgroundTaskInvalid
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        FileManager.default
         // Override point for customization after application launch.
         return true
     }
@@ -25,8 +58,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        registerBackgroundTask()
+        doSomeThing()
+        endBackgroundTask()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -40,6 +74,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "UserData")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
 
 
 }
